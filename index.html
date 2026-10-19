@@ -1,0 +1,233 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MPPE · Designações ativas por membro — CGMP 2023-2026</title>
+<style>
+  :root{
+    --ink: var(--foreground, #16202b);
+    --muted: var(--muted-foreground, #66758a);
+    --line: var(--border, #dde4ee);
+    --card: var(--card, #ffffff);
+    --accent: var(--accent, #1f5f8b);
+    --navy:#123a5c; --green:#2f7a58; --amber:#9a6b1f; --red:#8c3b3b;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;color:var(--ink);font-size:14px;line-height:1.45}
+  .wrap{max-width:1180px;margin:0 auto;padding:22px 20px 34px}
+  header{border-bottom:2px solid var(--navy);padding-bottom:14px;margin-bottom:18px}
+  .kicker{font-size:10.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);font-weight:600}
+  h1{font-size:22px;margin:6px 0 4px;font-weight:650;letter-spacing:-.2px}
+  .sub{font-size:12.5px;color:var(--muted)}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:16px 0 22px}
+  .kpi{border:1px solid var(--line);border-radius:9px;padding:11px 13px;background:var(--card)}
+  .kpi b{display:block;font-size:24px;line-height:1.1;font-weight:680}
+  .kpi span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.7px}
+  .kpi.k1 b{color:var(--green)} .kpi.k2 b{color:var(--muted)} .kpi.k3 b{color:var(--navy)} .kpi.k4 b{color:var(--amber)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:14px}
+  .card{border:1px solid var(--line);border-radius:10px;background:var(--card);overflow:hidden;display:flex;flex-direction:column}
+  .card.zero{opacity:.85}
+  .ch{display:flex;align-items:flex-start;gap:10px;padding:12px 14px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(18,58,92,.055),transparent)}
+  .avatar{width:34px;height:34px;border-radius:50%;flex:0 0 34px;display:grid;place-items:center;font-weight:700;font-size:12.5px;color:#fff;background:var(--navy)}
+  .who{flex:1;min-width:0}
+  .who h2{font-size:13.5px;margin:0;font-weight:650;letter-spacing:-.1px}
+  .who p{margin:2px 0 0;font-size:11px;color:var(--muted)}
+  .count{font-size:11px;font-weight:700;padding:3px 8px;border-radius:20px;border:1px solid var(--line);white-space:nowrap}
+  .count.on{color:var(--green);border-color:rgba(47,122,88,.35);background:rgba(47,122,88,.08)}
+  .count.off{color:var(--muted)}
+  ul.items{list-style:none;margin:0;padding:10px 14px 12px}
+  ul.items li{padding:9px 0;border-bottom:1px dashed var(--line)}
+  ul.items li:last-child{border-bottom:none;padding-bottom:2px}
+  .org{font-weight:640;font-size:12.8px}
+  .chip{display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:1.5px 6px;border-radius:4px;margin-left:6px;vertical-align:1px;border:1px solid}
+  .c-nuc{color:#1f5f8b;border-color:rgba(31,95,139,.35);background:rgba(31,95,139,.08)}
+  .c-com{color:#2f7a58;border-color:rgba(47,122,88,.35);background:rgba(47,122,88,.08)}
+  .c-csl{color:#7a4b8c;border-color:rgba(122,75,140,.35);background:rgba(122,75,140,.08)}
+  .meta{font-size:11.5px;color:var(--muted);margin-top:3px}
+  .meta b{color:var(--ink);font-weight:600}
+  .meta a{color:var(--accent);text-decoration:none;border-bottom:1px dotted}
+  .role{display:inline-block;font-size:11px;margin-top:2px;color:var(--ink)}
+  .closed{padding:9px 14px 12px;border-top:1px solid var(--line);background:rgba(140,59,59,.045)}
+  .closed h3{font-size:10px;letter-spacing:1.1px;text-transform:uppercase;margin:0 0 5px;color:var(--red);font-weight:700}
+  .closed p{margin:0 0 4px;font-size:11.3px;color:var(--muted)}
+  .closed p b{color:var(--ink);font-weight:600}
+  .closed a{color:var(--accent);text-decoration:none;border-bottom:1px dotted}
+  footer{margin-top:24px;border-top:1px solid var(--line);padding-top:12px;font-size:11.3px;color:var(--muted)}
+  footer ul{margin:6px 0 0;padding-left:17px}
+  footer li{margin-bottom:3px}
+  .tag{font-size:10px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--amber)}
+</style></head><body><div class="wrap">
+<header>
+  <div class="kicker">Corregedoria-Geral do Ministério Público de Pernambuco</div>
+  <h1>Designações ativas em núcleos, comitês, conselhos e comissões</h1>
+  <div class="sub">Resumo por membro · DOE/MPPE de 01/01/2023 a 19/10/2026 · corte em 19/10/2026 · excluídas comissões de processo disciplinar e mesa/comissão eleitoral</div>
+</header>
+
+<div class="kpis">
+  <div class="kpi k1"><b>13</b><span>designações ativas</span></div>
+  <div class="kpi k3"><b>6</b><span>membros com designação</span></div>
+  <div class="kpi k2"><b>6</b><span>encerradas / substituídas</span></div>
+  <div class="kpi k4"><b>2</b><span>sem designação ativa</span></div>
+</div>
+
+<div class="grid">
+
+  <!-- MARIA IVANA -->
+  <div class="card">
+    <div class="ch"><div class="avatar">MI</div>
+      <div class="who"><h2>Maria Ivana Botelho Vieira da Silva</h2><p>Corregedora-Geral do MPPE</p></div>
+      <div class="count on">1 ativa</div></div>
+    <ul class="items">
+      <li>
+        <div class="org">Núcleo de Enfrentamento ao Racismo (NER)<span class="chip c-nuc">Núcleo</span></div>
+        <div class="role">Membro</div>
+        <div class="meta"><b>Portaria PGJ de 01/06/2026</b> · DOE 02/06/2026 · <a href="https://portal.mppe.mp.br/documents/20121/2191123/DiarioOficialMPPE-Edicao+num1941-2026-06-02.pdf/c24c9aa6-9614-c6fb-8dea-c2de397b773b?version=1.0&download=true">ed. 1941</a><br>Composição anterior: PGJ nº 1.712/2026 (DOE 28/05/2026) — mantida em ambas.</div>
+      </li>
+    </ul>
+    <div class="closed"><h3>Encerradas / substituídas</h3>
+      <p><b>Núcleo de Apoio Executivo da Gestão Estratégica</b> — PGJ nº 518/2023: substituída pela PGJ nº 892/2025, que designou o Dr. Charles Hamilton.</p>
+      <p><b>GT sobre Discriminação Racial</b> — PGJ de 09/05/2023 (coordenadora): convertido no NER, cuja composição atual é a de 2026.</p>
+    </div>
+  </div>
+
+  <!-- CHARLES -->
+  <div class="card">
+    <div class="ch"><div class="avatar">CH</div>
+      <div class="who"><h2>Charles Hamilton dos Santos Lima</h2><p>Corregedor-Geral Substituto do MPPE</p></div>
+      <div class="count on">2 ativas</div></div>
+    <ul class="items">
+      <li>
+        <div class="org">Núcleo de Apoio Executivo da Gestão Estratégica<span class="chip c-nuc">Núcleo</span></div>
+        <div class="role">Representante da Corregedoria-Geral</div>
+        <div class="meta"><b>PGJ nº 892/2025</b> · DOE 26/03/2025 (republ. 27/03) · <a href="https://portal.mppe.mp.br/documents/20121/1198376/MPPE+26.03.2025+Edicao+1668.pdf/5750d0a1-61d2-5f57-3fd4-bd37a735e9a3?version=1.0&t=1742942484409&download=true">ed. 1668</a></div>
+      </li>
+      <li>
+        <div class="org">Grupo de Trabalho de IA Generativa (GTIA-MPPE)<span class="chip c-com">GT</span></div>
+        <div class="role">Membro</div>
+        <div class="meta"><b>PGJ nº 1.079/2024</b> · DOE 16/04/2024 · <a href="https://portal.mppe.mp.br/documents/20121/843757/MPPE+16.04.2024+Edicao+1446.pdf/22dff6ec-fe42-2005-aad6-3ecd5ba2ea4c?version=1.0&t=1713218666630&download=true">ed. 1446</a><br>Sem ato de revogação ou nova composição localizado.</div>
+      </li>
+    </ul>
+    <div class="closed"><h3>Encerrada / substituída</h3>
+      <p><b>Conselho Deliberativo do FDIMPPE</b> — PGJ nº 2.443/2024 (DOE 13/08/2024): nova composição pela <b>PGJ nº 813/2025</b> (DOE 18/03/2026, <a href="https://portal.mppe.mp.br/documents/20121/1987866/MPPE+18.03.2026+Edicao+1890.pdf/02477497-761c-6774-1206-2b9ae47d0b3e?version=1.0&download=true">ed. 1890</a>), sem seu nome — E. L. Silva Cajueiro, J. Correia de Araújo e R. Van Der Linden (supl.).</p>
+    </div>
+  </div>
+
+  <!-- ALEN -->
+  <div class="card">
+    <div class="ch"><div class="avatar">AL</div>
+      <div class="who"><h2>Alen de Souza Pessoa</h2><p>Corregedor-Auxiliar da CGMP</p></div>
+      <div class="count on">1 ativa</div></div>
+    <ul class="items">
+      <li>
+        <div class="org">Núcleo do Desporto e Defesa do Torcedor (NUDTOR)<span class="chip c-nuc">Núcleo</span></div>
+        <div class="role">Membro — 6º PJ Criminal da Capital e assessor da CGMP</div>
+        <div class="meta"><b>PGJ nº 1.780/2025</b> · DOE 05/06/2025 · <a href="https://portal.mppe.mp.br/documents/20121/1342803/DiarioOficialMPPE-Edicao+num1714-2025-06-05.pdf/6d77394c-2323-0a41-b7e6-702bb89bf102?version=1.0&t=1749077368344&download=true">ed. 1714</a><br>Coordenação do núcleo alterada em 2026 (PGJ 2.679/2026), sem afetar seu assento; sem dispensa localizada.</div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- CHICO -->
+  <div class="card">
+    <div class="ch"><div class="avatar">FE</div>
+      <div class="who"><h2>Francisco Edilson de Sá Júnior</h2><p>Corregedor-Auxiliar da CGMP</p></div>
+      <div class="count on">4 ativas</div></div>
+    <ul class="items">
+      <li>
+        <div class="org">Comitê Gestor de Sistemas da Atividade Fim (CGSAF)<span class="chip c-com">Comitê</span></div>
+        <div class="role">Membro indicado pela Corregedora-Geral</div>
+        <div class="meta"><b>PGJ nº 666/2026</b> · DOE 04/03/2026, efeitos desde 01/03/2026 · <a href="https://portal.mppe.mp.br/documents/20121/1987866/DiarioOficialMPPE-Edicao+num1881-2026-03-04.pdf/e714010c-9360-a826-1f1c-13641f4fc723?version=1.0&t=1772578241257&download=true">ed. 1881</a><br>Publica a nova composição e revoga as designações anteriores (a de 2023 era a PGJ 1.810/2023, art. 3º, "c").</div>
+      </li>
+      <li>
+        <div class="org">Comitê Estratégico de Tecnologia da Informação (CETI/MPPE)<span class="chip c-com">Comitê</span></div>
+        <div class="role">Membro indicado pela Corregedoria-Geral</div>
+        <div class="meta"><b>PGJ nº 1.810/2023, art. 2º, "c"</b> · DOE 14/06/2023 · <a href="https://portal.mppe.mp.br/documents/20121/632322/MPPE+14.06.2023+Edicao+1251.pdf/c742af16-c7b1-1e20-a75f-6d56bf87b6ab?version=1.0&t=1686693501355&download=true">ed. 1251</a><br>Última composição integral do CETI; a PGJ 666/2026 alterou apenas o CGSAF e o assento nato do seu presidente.</div>
+      </li>
+      <li>
+        <div class="org">Comitê Estratégico de Proteção de Dados Pessoais (CEPDAP/MPPE)<span class="chip c-com">Comitê</span></div>
+        <div class="role">Membro indicado pela CGMP</div>
+        <div class="meta"><b>PGJ nº 175/2024</b> · DOE 24/01/2024, efeitos desde 02/01/2024 · <a href="https://portal.mppe.mp.br/documents/20121/777709/MPPE+24.01.2024+Edicao+1394.pdf/c21016dd-5d15-fc38-d554-291758de6e29?version=1.0&t=1706050623020&download=true">ed. 1394</a></div>
+      </li>
+      <li>
+        <div class="org">Grupo de Trabalho de IA Generativa (GTIA-MPPE)<span class="chip c-com">GT</span></div>
+        <div class="role">Membro</div>
+        <div class="meta"><b>PGJ nº 1.079/2024</b> · DOE 16/04/2024 · <a href="https://portal.mppe.mp.br/documents/20121/843757/MPPE+16.04.2024+Edicao+1446.pdf/22dff6ec-fe42-2005-aad6-3ecd5ba2ea4c?version=1.0&t=1713218666630&download=true">ed. 1446</a></div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- JECQUELINE -->
+  <div class="card">
+    <div class="ch"><div class="avatar">JE</div>
+      <div class="who"><h2>Jecqueline Guilherme Aymar Elihimas</h2><p>Corregedora-Auxiliar da CGMP</p></div>
+      <div class="count on">2 ativas</div></div>
+    <ul class="items">
+      <li>
+        <div class="org">Núcleo DHANA Josué de Castro<span class="chip c-nuc">Núcleo</span></div>
+        <div class="role">Membro — alimentação e nutrição adequadas</div>
+        <div class="meta"><b>PGJ nº 561/2023</b> · DOE 08/02/2023 · <a href="https://portal.mppe.mp.br/documents/20121/346404/MPPE+08.02.2023+Edicao+1171-2023.pdf/b1cd1e40-5c5e-57c1-e780-f729c9f76cf7?version=1.0&t=1675806543398&download=true">ed. 1171</a><br>Sem ato de dispensa ou nova composição localizado.</div>
+      </li>
+      <li>
+        <div class="org">Comissão de Prevenção a Situação de Risco à Saúde Mental<span class="chip c-com">Comissão</span></div>
+        <div class="role">Representante da Corregedoria-Geral</div>
+        <div class="meta"><b>PGJ nº 4.101/2025</b> · DOE 24/11/2025 · <a href="https://portal.mppe.mp.br/documents/20121/1539951/DiarioOficialMPPE-Edicao+num1825-2025-11-24.pdf/1ae0d88f-4730-8bbd-86c7-5f220cac20b6?version=1.0&t=1763593084596&download=true">ed. 1825</a><br>Publica a nova composição e revoga as anteriores (446/2024 e 1.066/2025). Atos posteriores (4.375/2025 e 3.218/2026) trocaram apenas assentos de servidores.</div>
+      </li>
+    </ul>
+    <div class="closed"><h3>Encerrada / substituída</h3>
+      <p><b>Núcleo de Estudos Temáticos de Defesa da Infância e Juventude</b> — PGJ nº 1.219/2023: dispensa a pedido pela <b>PGJ nº 545/2024</b> (DOE 04/03/2024).</p>
+    </div>
+  </div>
+
+  <!-- PETRUCIO -->
+  <div class="card">
+    <div class="ch"><div class="avatar">PL</div>
+      <div class="who"><h2>Petrúcio José Luna de Aquino</h2><p>Corregedor-Auxiliar da CGMP</p></div>
+      <div class="count on">3 ativas</div></div>
+    <ul class="items">
+      <li>
+        <div class="org">Comitê de Segurança Institucional (CSI/MPPE)<span class="chip c-com">Comitê</span></div>
+        <div class="role">Membro indicado pela Corregedoria-Geral</div>
+        <div class="meta"><b>PGJ nº 09/2026</b> · DOE 08/01/2026 · <a href="https://portal.mppe.mp.br/documents/20121/1907240/DiarioOficialMPPE-Edicao+num1845-2026-01-08.pdf/5d432a03-656e-3778-eb3b-99d8e848e84e?version=1.0&t=1767825618805&download=true">ed. 1845</a><br>Composição anterior: PGJ nº 463/2025 (DOE 17/02/2025).</div>
+      </li>
+      <li>
+        <div class="org">Subcomitê de Segurança de Pessoas (SubCSP/MPPE)<span class="chip c-com">Subcomitê</span></div>
+        <div class="role">Membro indicado pela Corregedoria-Geral</div>
+        <div class="meta"><b>PGJ nº 09/2026</b> · DOE 08/01/2026 · <a href="https://portal.mppe.mp.br/documents/20121/1907240/DiarioOficialMPPE-Edicao+num1845-2026-01-08.pdf/5d432a03-656e-3778-eb3b-99d8e848e84e?version=1.0&t=1767825618805&download=true">ed. 1845</a><br>Não é o SubCPSI (segurança institucional), presidido pelo SubPGJ administrativo.</div>
+      </li>
+      <li>
+        <div class="org">Comitê de Políticas de Gestão Administrativa — FNG/CNMP<span class="chip c-com">Comitê</span></div>
+        <div class="role">Titular do MPPE (anexo da PGJ nº 891/2023)</div>
+        <div class="meta"><b>PGJ nº 891/2023</b> · DOE 15/03/2023 · <a href="https://portal.mppe.mp.br/documents/20121/459269/MPPE+15.03.2023+Edicao+1191.pdf/379d5165-67fc-b6e8-bfea-b0b0036dbf21?version=1.0&t=1678832153917&download=true">ed. 1191</a><br><span class="tag">atenção</span> sem renovação ou revogação localizada desde 2023.</div>
+      </li>
+    </ul>
+    <div class="closed"><h3>Encerradas / substituídas</h3>
+      <p><b>NGAF</b> — PGJ de 13/01/2023: dispensa a pedido pela PGJ nº 184/2023 (DOE 16/01/2023).</p>
+      <p><b>NUDTOR</b> — PGJ nº 1.076/2024: dispensa a pedido pela PGJ nº 490/2025 (DOE 18/02/2025), que também o dispensou do GEX-PDAP.</p>
+    </div>
+  </div>
+
+  <!-- KATARINA -->
+  <div class="card zero">
+    <div class="ch"><div class="avatar" style="background:#5b6b7f">KG</div>
+      <div class="who"><h2>Katarina Morais de Gusmão</h2><p>Corregedora-Auxiliar da CGMP</p></div>
+      <div class="count off">0 ativa</div></div>
+    <ul class="items"><li><div class="meta">Nenhuma designação para núcleo, comitê, conselho ou comissão no período. Atua como corregedora-auxiliar e na secretaria de comissões de processo disciplinar (excluídas por critério).</div></li></ul>
+  </div>
+
+  <!-- NORMA -->
+  <div class="card zero">
+    <div class="ch"><div class="avatar" style="background:#5b6b7f">NL</div>
+      <div class="who"><h2>Norma da Mota Sales Lima</h2><p>Procuradora de Justiça · Corregedora-Auxiliar</p></div>
+      <div class="count off">0 ativa</div></div>
+    <ul class="items"><li><div class="meta">Nenhuma designação no período após a exclusão de mesa/comissão eleitoral. Integra o Colégio de Procuradores por força do cargo (posse em 06/11/2025), sem ato de designação.</div></li></ul>
+  </div>
+
+</div>
+
+<footer>
+  <b>Método.</b> Varredura nominal em 882 edições do DOE/MPPE (2023-01-01 a 19/10/2026): designações expressas, composições publicadas em lista, dispensas e atos de alteração/revogação posteriores a cada designação.
+  <ul>
+    <li><b>Ativa</b> = designação sem dispensa e sem composição posterior que a exclua; quando houve republicação da composição, vale o ato mais recente.</li>
+    <li><b>Correções nesta versão:</b> a PGJ nº 1.810/2023 designa o CETI no art. 2º e o CGSAF no art. 3º (o art. 4º é o CGSAM); o número antes ilegível do ato do CGSAF é <b>PGJ nº 666/2026</b>; a composição atual da comissão de saúde mental é a da <b>PGJ nº 4.101/2025</b>; a composição do FDIMPPE de 2024 foi substituída em março de 2026 (Charles não consta).</li>
+    <li>O portal não oferece busca full-text: cada edição foi baixada e o texto extraído; atos publicados apenas como imagem não seriam capturados.</li>
+  </ul>
+  <div style="margin-top:8px">Fonte: portal.mppe.mp.br/diario-oficial · consolidado em 19/10/2026</div>
+</footer>
+</div></body></html>
