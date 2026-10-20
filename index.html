@@ -1,233 +1,636 @@
 <!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MPPE · Designações ativas por membro — CGMP 2023-2026</title>
+<title>Designações por membro · CGMP/MPPE 2023–2026</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23123a5c'/%3E%3Ctext x='32' y='43' font-family='-apple-system,system-ui,sans-serif' font-size='27' font-weight='700' fill='white' text-anchor='middle'%3EMP%3C/text%3E%3C/svg%3E">
 <style>
   :root{
-    --ink: var(--foreground, #16202b);
-    --muted: var(--muted-foreground, #66758a);
-    --line: var(--border, #dde4ee);
-    --card: var(--card, #ffffff);
-    --accent: var(--accent, #1f5f8b);
-    --navy:#123a5c; --green:#2f7a58; --amber:#9a6b1f; --red:#8c3b3b;
+    --bg:#f5f5f7; --surface:#ffffff; --surface-2:#fbfbfd;
+    --label:#1d1d1f; --label-2:#6e6e73; --label-3:#8e8e93;
+    --sep:rgba(0,0,0,.09); --sep-soft:rgba(0,0,0,.055);
+    --accent:#0071e3; --navy:#123a5c; --green:#1f7a52; --purple:#7d4b8c; --red:#b0403c; --amber:#9a6b1f;
+    --tint-nuc:rgba(0,113,227,.09); --tint-nuc-b:rgba(0,113,227,.28);
+    --tint-com:rgba(31,122,82,.10); --tint-com-b:rgba(31,122,82,.28);
+    --tint-csl:rgba(125,75,140,.10); --tint-csl-b:rgba(125,75,140,.28);
+    --chip-nuc:#005bb8; --chip-com:#146344; --chip-csl:#6a3d78;
+    --st-ativa:#146344; --st-sub:#7a5416; --st-disp:#8c3b3b; --st-enc:#6a3d78;
+    --st-ativa:#146344; --st-sub:#7a5416; --st-disp:#8c3b3b; --st-enc:#6a3d78;
+    --shadow:0 1px 2px rgba(0,0,0,.045), 0 10px 28px -14px rgba(0,0,0,.18);
+    --shadow-hover:0 2px 4px rgba(0,0,0,.05), 0 18px 42px -18px rgba(0,0,0,.26);
+    --chrome:rgba(245,245,247,.72);
+    --radius:18px;
+    color-scheme: light dark;
   }
-  *{box-sizing:border-box}
-  body{margin:0;color:var(--ink);font-size:14px;line-height:1.45}
-  .wrap{max-width:1180px;margin:0 auto;padding:22px 20px 34px}
-  header{border-bottom:2px solid var(--navy);padding-bottom:14px;margin-bottom:18px}
-  .kicker{font-size:10.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);font-weight:600}
-  h1{font-size:22px;margin:6px 0 4px;font-weight:650;letter-spacing:-.2px}
-  .sub{font-size:12.5px;color:var(--muted)}
-  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:16px 0 22px}
-  .kpi{border:1px solid var(--line);border-radius:9px;padding:11px 13px;background:var(--card)}
-  .kpi b{display:block;font-size:24px;line-height:1.1;font-weight:680}
-  .kpi span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.7px}
-  .kpi.k1 b{color:var(--green)} .kpi.k2 b{color:var(--muted)} .kpi.k3 b{color:var(--navy)} .kpi.k4 b{color:var(--amber)}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:14px}
-  .card{border:1px solid var(--line);border-radius:10px;background:var(--card);overflow:hidden;display:flex;flex-direction:column}
-  .card.zero{opacity:.85}
-  .ch{display:flex;align-items:flex-start;gap:10px;padding:12px 14px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(18,58,92,.055),transparent)}
-  .avatar{width:34px;height:34px;border-radius:50%;flex:0 0 34px;display:grid;place-items:center;font-weight:700;font-size:12.5px;color:#fff;background:var(--navy)}
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0b0b0d; --surface:#1c1c1f; --surface-2:#212125;
+      --label:#f5f5f7; --label-2:#a1a1a6; --label-3:#86868b;
+      --sep:rgba(255,255,255,.12); --sep-soft:rgba(255,255,255,.07);
+      --accent:#0a84ff; --navy:#7fb4d8; --green:#4caf88; --purple:#b489c4; --red:#e07a76; --amber:#d9a648;
+      --tint-nuc:rgba(10,132,255,.16); --tint-nuc-b:rgba(10,132,255,.36);
+      --tint-com:rgba(76,175,136,.15); --tint-com-b:rgba(76,175,136,.36);
+      --tint-csl:rgba(180,137,196,.15); --tint-csl-b:rgba(180,137,196,.36);
+      --chip-nuc:#5aa8ff; --chip-com:#63c39a; --chip-csl:#c39bd0;
+      --st-ativa:#63c39a; --st-sub:#d9a648; --st-disp:#e07a76; --st-enc:#c39bd0;
+      --st-ativa:#63c39a; --st-sub:#d9a648; --st-disp:#e07a76; --st-enc:#c39bd0;
+      --shadow:0 1px 2px rgba(0,0,0,.5), 0 12px 32px -16px rgba(0,0,0,.8);
+      --shadow-hover:0 2px 6px rgba(0,0,0,.55), 0 20px 48px -20px rgba(0,0,0,.9);
+      --chrome:rgba(11,11,13,.68);
+    }
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--bg);color:var(--label);
+    font:400 15px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,system-ui,sans-serif;
+    font-optical-sizing:auto;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  }
+  /* ---------- chrome: translucent material, no hard divider ---------- */
+  .chrome{
+    position:sticky;top:0;z-index:40;
+    background:var(--chrome);
+    -webkit-backdrop-filter:saturate(180%) blur(24px);
+    backdrop-filter:saturate(180%) blur(24px);
+    padding:10px 0 0;
+    isolation:isolate;
+  }
+  .chrome::after{
+    content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;
+    background:linear-gradient(90deg,transparent,var(--sep) 12%,var(--sep) 88%,transparent);
+    pointer-events:none;
+  }
+  .chrome-in{max-width:1180px;margin:0 auto;padding:0 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;min-height:48px}
+  .brand{display:flex;align-items:center;gap:9px;font-size:12.5px;font-weight:600;letter-spacing:.01em;color:var(--label-2);white-space:nowrap}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--navy);box-shadow:0 0 0 3px color-mix(in srgb,var(--navy) 16%,transparent)}
+  .grow{flex:1 1 auto}
+  .search{
+    display:flex;align-items:center;gap:7px;background:var(--surface);border:1px solid var(--sep);
+    border-radius:11px;padding:0 10px;height:34px;min-width:180px;transition:box-shadow .18s ease,border-color .18s ease;
+  }
+  .search:focus-within{border-color:color-mix(in srgb,var(--accent) 55%,var(--sep));box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 14%,transparent)}
+  .search input{border:0;outline:0;background:transparent;color:var(--label);font:inherit;font-size:13px;width:100%}
+  .search svg{flex:0 0 auto;opacity:.45}
+  .seg{position:relative;display:flex;background:color-mix(in srgb,var(--label) 7%,transparent);border-radius:11px;padding:3px;gap:2px}
+  .seg button{
+    position:relative;z-index:1;border:0;background:transparent;color:var(--label-2);
+    font:inherit;font-size:12.5px;font-weight:560;padding:6px 11px;border-radius:8px;cursor:pointer;
+    transition:color .18s ease,transform .1s ease-out;white-space:nowrap;
+  }
+  .seg button[aria-selected="true"]{color:var(--label)}
+  .seg button:active{transform:scale(.96)}
+  .seg-ind{position:absolute;z-index:0;top:3px;left:3px;height:calc(100% - 6px);border-radius:8px;background:var(--surface);box-shadow:0 1px 3px rgba(0,0,0,.12);will-change:transform,width}
+  .btn-ghost{
+    border:1px solid var(--sep);background:var(--surface);color:var(--label);font:inherit;font-size:12.5px;font-weight:560;
+    padding:8px 13px;border-radius:11px;cursor:pointer;transition:transform .1s ease-out,background .18s ease;display:inline-flex;align-items:center;gap:6px;
+  }
+  .btn-ghost:hover{background:var(--surface-2)}
+  .btn-ghost:active{transform:scale(.97)}
+
+  /* ---------- page ---------- */
+  .wrap{max-width:1180px;margin:0 auto;padding:30px 22px 40px}
+  .kicker{font-size:10.5px;font-weight:650;letter-spacing:.09em;text-transform:uppercase;color:var(--label-3)}
+  h1{
+    margin:9px 0 8px;font-weight:680;
+    font-size:clamp(1.65rem,4.2vw,2.45rem);line-height:1.07;letter-spacing:-.022em;
+    max-width:22ch;
+  }
+  .sub{margin:0;color:var(--label-2);font-size:13.5px;line-height:1.5;max-width:78ch}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(156px,1fr));gap:12px;margin:26px 0 30px}
+  .kpi{
+    background:var(--surface);border:1px solid var(--sep-soft);border-radius:var(--radius);padding:14px 16px 13px;
+    box-shadow:var(--shadow);position:relative;overflow:hidden;
+  }
+  .kpi::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--k,var(--navy));opacity:.9}
+  .kpi b{display:block;font-size:32px;line-height:1.02;font-weight:680;letter-spacing:-.024em;font-variant-numeric:tabular-nums}
+  .kpi span{display:block;margin-top:5px;font-size:11px;font-weight:600;letter-spacing:.055em;text-transform:uppercase;color:var(--label-3)}
+  .kpi.k1{--k:var(--green)} .kpi.k2{--k:var(--navy)} .kpi.k3{--k:var(--label-3)} .kpi.k4{--k:var(--amber)}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:16px;align-items:start}
+  .card{
+    background:var(--surface);border:1px solid var(--sep-soft);border-radius:var(--radius);
+    box-shadow:var(--shadow);overflow:hidden;will-change:transform;
+    transition:box-shadow .28s cubic-bezier(.2,.7,.2,1),transform .28s cubic-bezier(.2,.7,.2,1),border-color .2s;
+  }
+  .card:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px);border-color:var(--sep)}
+  .card.is-hidden{display:none}
+  .card.zero{background:var(--surface-2)}
+  .ch{display:flex;align-items:flex-start;gap:11px;padding:15px 16px 13px;border-bottom:1px solid var(--sep-soft)}
+  .avatar{
+    width:36px;height:36px;flex:0 0 36px;border-radius:50%;display:grid;place-items:center;
+    font-size:12.5px;font-weight:650;letter-spacing:.01em;color:#fff;background:var(--navy);
+    box-shadow:inset 0 -1px 0 rgba(0,0,0,.14);
+  }
   .who{flex:1;min-width:0}
-  .who h2{font-size:13.5px;margin:0;font-weight:650;letter-spacing:-.1px}
-  .who p{margin:2px 0 0;font-size:11px;color:var(--muted)}
-  .count{font-size:11px;font-weight:700;padding:3px 8px;border-radius:20px;border:1px solid var(--line);white-space:nowrap}
-  .count.on{color:var(--green);border-color:rgba(47,122,88,.35);background:rgba(47,122,88,.08)}
-  .count.off{color:var(--muted)}
-  ul.items{list-style:none;margin:0;padding:10px 14px 12px}
-  ul.items li{padding:9px 0;border-bottom:1px dashed var(--line)}
-  ul.items li:last-child{border-bottom:none;padding-bottom:2px}
-  .org{font-weight:640;font-size:12.8px}
-  .chip{display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:1.5px 6px;border-radius:4px;margin-left:6px;vertical-align:1px;border:1px solid}
-  .c-nuc{color:#1f5f8b;border-color:rgba(31,95,139,.35);background:rgba(31,95,139,.08)}
-  .c-com{color:#2f7a58;border-color:rgba(47,122,88,.35);background:rgba(47,122,88,.08)}
-  .c-csl{color:#7a4b8c;border-color:rgba(122,75,140,.35);background:rgba(122,75,140,.08)}
-  .meta{font-size:11.5px;color:var(--muted);margin-top:3px}
-  .meta b{color:var(--ink);font-weight:600}
-  .meta a{color:var(--accent);text-decoration:none;border-bottom:1px dotted}
-  .role{display:inline-block;font-size:11px;margin-top:2px;color:var(--ink)}
-  .closed{padding:9px 14px 12px;border-top:1px solid var(--line);background:rgba(140,59,59,.045)}
-  .closed h3{font-size:10px;letter-spacing:1.1px;text-transform:uppercase;margin:0 0 5px;color:var(--red);font-weight:700}
-  .closed p{margin:0 0 4px;font-size:11.3px;color:var(--muted)}
-  .closed p b{color:var(--ink);font-weight:600}
-  .closed a{color:var(--accent);text-decoration:none;border-bottom:1px dotted}
-  footer{margin-top:24px;border-top:1px solid var(--line);padding-top:12px;font-size:11.3px;color:var(--muted)}
-  footer ul{margin:6px 0 0;padding-left:17px}
-  footer li{margin-bottom:3px}
-  .tag{font-size:10px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--amber)}
-</style></head><body><div class="wrap">
-<header>
+  .who h2{margin:0;font-size:14px;font-weight:640;letter-spacing:-.006em;line-height:1.28}
+  .who p{margin:3px 0 0;font-size:11.5px;color:var(--label-2)}
+  .pill{
+    flex:0 0 auto;font-size:11px;font-weight:650;padding:4px 9px;border-radius:20px;white-space:nowrap;
+    border:1px solid var(--sep);color:var(--label-2);font-variant-numeric:tabular-nums;
+  }
+  .pill.on{color:var(--green);border-color:color-mix(in srgb,var(--green) 34%,transparent);background:color-mix(in srgb,var(--green) 9%,transparent)}
+  ul.items{list-style:none;margin:0;padding:4px 16px 14px}
+  ul.items>li{padding:11px 0;border-bottom:1px solid var(--sep-soft)}
+  ul.items>li:last-child{border-bottom:0;padding-bottom:4px}
+  .org{font-size:13px;font-weight:620;letter-spacing:-.004em;line-height:1.35}
+  .chip{
+    display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    padding:2px 6px;border-radius:5px;margin-left:7px;vertical-align:1.5px;border:1px solid;
+  }
+  .c-nuc{color:var(--chip-nuc);background:var(--tint-nuc);border-color:var(--tint-nuc-b)}
+  .c-com{color:var(--chip-com);background:var(--tint-com);border-color:var(--tint-com-b)}
+  .c-csl{color:var(--chip-csl);background:var(--tint-csl);border-color:var(--tint-csl-b)}
+  .role{display:block;margin-top:3px;font-size:12px;color:var(--label)}
+  .meta{margin-top:4px;font-size:11.5px;line-height:1.5;color:var(--label-2)}
+  .meta b{color:var(--label);font-weight:600}
+  .meta a{color:var(--accent);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--accent) 34%,transparent);transition:border-color .15s}
+  .meta a:hover{border-bottom-color:var(--accent)}
+  .tag{font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--amber)}
+
+  .disc{
+    width:100%;display:flex;align-items:center;gap:8px;border:0;border-top:1px solid var(--sep-soft);
+    background:color-mix(in srgb,var(--red) 5%,transparent);color:var(--red);
+    font:inherit;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+    padding:10px 16px;cursor:pointer;transition:background .18s ease,transform .1s ease-out;text-align:left;
+  }
+  .disc:hover{background:color-mix(in srgb,var(--red) 9%,transparent)}
+  .disc:active{transform:scale(.995)}
+  .disc .caret{transition:transform .3s cubic-bezier(.2,.7,.2,1);margin-left:auto;opacity:.8}
+  .disc[aria-expanded="true"] .caret{transform:rotate(90deg)}
+  .panel{height:0;overflow:hidden;background:color-mix(in srgb,var(--red) 4%,transparent);will-change:height}
+  .panel-in{padding:2px 16px 14px}
+  .panel p{margin:0 0 6px;font-size:11.5px;line-height:1.55;color:var(--label-2)}
+  .panel p:last-child{margin-bottom:0}
+  .panel p b{color:var(--label);font-weight:600}
+  .panel a{color:var(--accent);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--accent) 34%,transparent)}
+  .empty{padding:9px 0}
+
+  footer{margin-top:30px;border-top:1px solid var(--sep-soft);padding-top:16px;font-size:11.5px;line-height:1.6;color:var(--label-2)}
+  footer b{color:var(--label)}
+  footer ul{margin:8px 0 0;padding-left:18px}
+  footer li{margin-bottom:5px}
+  .stamp{margin-top:12px;font-size:11px;color:var(--label-3)}
+
+  @media (max-width:640px){
+    .chrome-in{gap:8px;padding:0 14px}
+    .brand span.long{display:none}
+    .search{order:3;flex:1 1 100%;min-width:0}
+    .seg{order:2}
+    .seg button{padding:6px 9px;font-size:12px}
+    .wrap{padding:22px 14px 32px}
+    .kpis{margin:20px 0 22px}
+    .grid{grid-template-columns:1fr}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    .card,.disc,.btn-ghost,.seg button{transition:opacity .18s linear,background .18s linear,color .18s linear}
+    .card:hover{transform:none}
+    .disc .caret{transition:none}
+  }
+  @media (prefers-reduced-transparency: reduce){
+    .chrome{background:var(--bg);-webkit-backdrop-filter:none;backdrop-filter:none;border-bottom:1px solid var(--sep)}
+    .chrome::after{display:none}
+  }
+  @media (prefers-contrast: more){
+    :root{--sep:currentColor;--sep-soft:currentColor;--label-2:#333;--label-3:#444}
+    .card,.kpi,.chrome{border:1px solid currentColor}
+    .chrome{backdrop-filter:none;background:var(--bg)}
+  }
+  @media print{
+    .chrome,.seg,.search,.btn-ghost,.disc{display:none!important}
+    body{background:#fff;color:#000}
+    .wrap{max-width:none;padding:0}
+    .grid{grid-template-columns:1fr 1fr;gap:10px}
+    .card{box-shadow:none;border:1px solid #bbb;break-inside:avoid}
+    .panel{height:auto!important;overflow:visible}
+    .kpi{box-shadow:none;border:1px solid #bbb}
+    a{color:#000;text-decoration:none}
+  }
+
+  /* ---- status badges + per-member groups (v2) ---- */
+  .st{
+    display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:.055em;text-transform:uppercase;
+    padding:2px 6px;border-radius:5px;margin-left:5px;vertical-align:1.5px;border:1px solid;white-space:nowrap;
+  }
+  .s-ativa{color:var(--st-ativa);background:color-mix(in srgb,var(--green) 11%,transparent);border-color:color-mix(in srgb,var(--green) 34%,transparent)}
+  .s-sub{color:var(--st-sub);background:color-mix(in srgb,var(--amber) 11%,transparent);border-color:color-mix(in srgb,var(--amber) 32%,transparent)}
+  .s-disp{color:var(--st-disp);background:color-mix(in srgb,var(--red) 9%,transparent);border-color:color-mix(in srgb,var(--red) 30%,transparent)}
+  .s-enc{color:var(--st-enc);background:color-mix(in srgb,var(--purple) 11%,transparent);border-color:color-mix(in srgb,var(--purple) 32%,transparent)}
+  li.grp{
+    list-style:none;font-size:9.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--label-3);padding:11px 0 3px;border-bottom:1px solid var(--sep-soft);
+  }
+  ul.items>li.grp+li{padding-top:9px}
+  ul.items>li.row.substituida .org,ul.items>li.row.dispensa .org,ul.items>li.row.encerrada .org{font-weight:560;color:var(--label-2)}
+  ul.items>li.row.substituida .meta b,ul.items>li.row.dispensa .meta b,ul.items>li.row.encerrada .meta b{color:var(--label-2)}
+
+  /* ---- status badges + per-member groups (v2) ---- */
+  .st{
+    display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:.055em;text-transform:uppercase;
+    padding:2px 6px;border-radius:5px;margin-left:5px;vertical-align:1.5px;border:1px solid;white-space:nowrap;
+  }
+  .s-ativa{color:var(--st-ativa);background:color-mix(in srgb,var(--green) 11%,transparent);border-color:color-mix(in srgb,var(--green) 34%,transparent)}
+  .s-sub{color:var(--st-sub);background:color-mix(in srgb,var(--amber) 11%,transparent);border-color:color-mix(in srgb,var(--amber) 32%,transparent)}
+  .s-disp{color:var(--st-disp);background:color-mix(in srgb,var(--red) 9%,transparent);border-color:color-mix(in srgb,var(--red) 30%,transparent)}
+  .s-enc{color:var(--st-enc);background:color-mix(in srgb,var(--purple) 11%,transparent);border-color:color-mix(in srgb,var(--purple) 32%,transparent)}
+  li.grp{
+    list-style:none;font-size:9.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--label-2);padding:11px 0 3px;border-bottom:1px solid var(--sep-soft);
+  }
+  ul.items>li.grp+li{padding-top:9px}
+  ul.items>li.row.substituida .org,ul.items>li.row.dispensa .org,ul.items>li.row.encerrada .org{font-weight:560;color:var(--label-2)}
+  ul.items>li.row.substituida .meta b,ul.items>li.row.dispensa .meta b,ul.items>li.row.encerrada .meta b{color:var(--label-2)}
+</style></head><body>
+
+<div class="chrome" id="chrome">
+  <div class="chrome-in">
+    <div class="brand"><span class="dot"></span><span class="long">CGMP/MPPE</span>&nbsp;· Designações por membro</div>
+    <div class="grow"></div>
+    <div class="seg" role="tablist" aria-label="Filtrar membros">
+      <div class="seg-ind" id="segInd"></div>
+      <button role="tab" aria-selected="true" data-filter="all">Todos</button>
+      <button role="tab" aria-selected="false" data-filter="on">Com ativa</button>
+      <button role="tab" aria-selected="false" data-filter="off">Sem ativa</button>
+    </div>
+    <label class="search">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4.2-4.2"></path></svg>
+      <input id="q" type="search" placeholder="Buscar membro, órgão ou ato" aria-label="Buscar membro, órgão ou ato">
+    </label>
+    <button class="btn-ghost" id="print" title="Imprimir / salvar em PDF">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9V3h12v6"></path><rect x="6" y="13" width="12" height="8"></rect><path d="M6 17H3v-6h18v6h-3"></path></svg>
+      Imprimir
+    </button>
+  </div>
+</div>
+
+<div class="wrap">
   <div class="kicker">Corregedoria-Geral do Ministério Público de Pernambuco</div>
-  <h1>Designações ativas em núcleos, comitês, conselhos e comissões</h1>
-  <div class="sub">Resumo por membro · DOE/MPPE de 01/01/2023 a 19/10/2026 · corte em 19/10/2026 · excluídas comissões de processo disciplinar e mesa/comissão eleitoral</div>
-</header>
+  <h1>Designações por membro da Corregedoria</h1>
+  <p class="sub">Núcleos, comitês, conselhos, comissões e grupos de trabalho · DOE/MPPE de 06/02/2023 a 20/10/2026 · 25 registros para os 8 integrantes da CGMP, com o histórico de cada um (substituídas e dispensas) · excluídas comissões de processo disciplinar e mesa eleitoral</p>
 
-<div class="kpis">
-  <div class="kpi k1"><b>13</b><span>designações ativas</span></div>
-  <div class="kpi k3"><b>6</b><span>membros com designação</span></div>
-  <div class="kpi k2"><b>6</b><span>encerradas / substituídas</span></div>
-  <div class="kpi k4"><b>2</b><span>sem designação ativa</span></div>
+  <div class="kpis">
+    <div class="kpi k1"><b data-count="13">13</b><span>designações ativas</span></div>
+    <div class="kpi k4"><b data-count="9">9</b><span>substituídas / encerradas</span></div>
+    <div class="kpi k3"><b data-count="3">3</b><span>dispensas a pedido</span></div>
+    <div class="kpi k2"><b data-count="6">6</b><span>membros com ativa (de 8)</span></div>
+  </div>
+
+  <div class="grid" id="grid">
+    <section class="card" data-active="1">
+      <div class="ch">
+        <div class="avatar">FE</div>
+        <div class="who"><h2>Francisco Edilson de Sá Júnior</h2><p>Corregedor-Auxiliar da CGMP</p></div>
+        <div class="pill on">4 ativas</div>
+      </div>
+      <ul class="items">
+        <li class="grp">Designações ativas</li>
+        <li class="row ativa">
+          <div class="org">Comitê Gestor de Sistemas da Atividade Fim (CGSAF)<span class="chip c-com">Comitê</span><span class="st s-ativa">Ativa</span></div>
+          <span class="role">Membro indicado pela Corregedora-Geral</span>
+          <div class="meta"><b>PGJ nº 666/2026</b> · DOE 04/03/2026 · <a href="https://portal.mppe.mp.br/documents/20121/1987866/DiarioOficialMPPE-Edicao+num1881-2026-03-04.pdf/e714010c-9360-a826-1f1c-13641f4fc723?version=1.0&t=1772578241257&download=true" target="_blank" rel="noopener">ed. 1881</a><br>Nova composição; revoga as designações anteriores (a de 2023 era a PGJ nº 1.810/2023, art. 3º, “c”).</div>
+        </li>
+        <li class="row ativa">
+          <div class="org">Comitê Estratégico de Tecnologia da Informação (CETI/MPPE)<span class="chip c-com">Comitê</span><span class="st s-ativa">Ativa</span></div>
+          <span class="role">Membro indicado pela CGMP</span>
+          <div class="meta"><b>PGJ nº 1.810/2023, art. 2º, “c”</b> · DOE 14/06/2023 · <a href="https://portal.mppe.mp.br/documents/20121/632322/MPPE+14.06.2023+Edicao+1251.pdf/c742af16-c7b1-1e20-a75f-6d56bf87b6ab?version=1.0&t=1686693501355&download=true" target="_blank" rel="noopener">ed. 1251</a><br>Última composição integral do CETI; a PGJ nº 666/2026 alterou apenas o CGSAF.</div>
+        </li>
+        <li class="row ativa">
+          <div class="org">Comitê Estratégico de Proteção de Dados Pessoais (CEPDAP/MPPE)<span class="chip c-com">Comitê</span><span class="st s-ativa">Ativa</span></div>
+          <span class="role">Membro indicado pela CGMP</span>
+          <div class="meta"><b>PGJ nº 175/2024</b> · DOE 24/01/2024 · <a href="https://portal.mppe.mp.br/documents/20121/777709/MPPE+24.01.2024+Edicao+1394.pdf/c21016dd-5d15-fc38-d554-291758de6e29?version=1.0&t=1706050623020&download=true" target="_blank" rel="noopener">ed. 1394</a><br>Efeitos desde 02/01/2024.</div>
+        </li>
+        <li class="row ativa">
+          <div class="org">Grupo de Trabalho de IA Generativa (GTIA-MPPE)<span class="chip c-csl">GT</span><span class="st s-ativa">Ativa</span></div>
+          <span class="role">Membro</span>
+          <div class="meta"><b>PGJ nº 1.079/2024</b> · DOE 16/04/2024 · <a href="https://portal.mppe.mp.br/documents/20121/843757/MPPE+16.04.2024+Edicao+1446.pdf/22dff6ec-fe42-2005-aad6-3ecd5ba2ea4c?version=1.0&t=1713218666630&download=true" target="_blank" rel="noopener">ed. 1446</a><br>Designação conjunta com o Dr. Charles Hamilton.</div>
+        </li>
+        <li class="grp">Histórico — 1 registro</li>
+        <li class="row substituida">
+          <div class="org">Comitê Gestor de Sistemas da Atividade Fim (CGSAF)<span class="chip c-com">Comitê</span><span class="st s-sub">Substituída</span></div>
+          <span class="role">Assessor da Corregedoria-Geral, indicado pelo Corregedor-Geral</span>
+          <div class="meta"><b>PGJ nº 1.810/2023, art. 3º, “c”</b> · DOE 14/06/2023 · <a href="https://portal.mppe.mp.br/documents/20121/632322/MPPE+14.06.2023+Edicao+1251.pdf/c742af16-c7b1-1e20-a75f-6d56bf87b6ab?version=1.0&t=1686693501355&download=true" target="_blank" rel="noopener">ed. 1251</a><br>Assento substituído pela composição da PGJ nº 666/2026.</div>
+        </li>
+      </ul>
+    </section>
+    <section class="card" data-active="1">
+      <div class="ch">
+        <div class="avatar">PL</div>
+        <div class="who"><h2>Petrúcio José Luna de Aquino</h2><p>Corregedor-Auxiliar da CGMP</p></div>
+        <div class="pill on">3 ativas</div>
+      </div>
+      <ul class="items">
+        <li class="grp">Designações ativas</li>
+        <li class="row ativa">
+          <div class="org">Comitê de Segurança Institucional (CSI/MPPE)<span class="chip c-com">Comitê</span><span class="st s-ativa">Ativa</span></div>
+          <span class="role">Membro indicado pela Corregedoria-Geral</span>
+          <div class="meta"><b>PGJ nº 09/2026</b> · DOE 08/01/2026 · <a href="https://portal.mppe.mp.br/documents/20121/1907240/DiarioOficialMPPE-Edicao+num1845-2026-01-08.pdf/5d432a03-656e-3778-eb3b-99d8e848e84e?version=1.0&t=1767825618805&download=true" target="_blank" rel="noopener">ed. 1845</a><br>Composição anterior: PGJ nº 463/2025 (ed. 1647).</div>
+        </li>
+        <li class="row ativa">
+          <div class="org">Subcomitê de Segurança de Pessoas (SubCSP/MPPE)<span class="chip c-com">Subcomitê</span><span class="st s-ativa">Ativa</span></div>
+          <span class="role">Membro indicado pela Corregedoria-Geral</span>
+          <div class="meta"><b>PGJ nº 09/2026</b> · DOE 08/01/2026 · <a href="https://portal.mppe.mp.br/documents/20121/1907240/DiarioOficialMPPE-Edicao+num1845-2026-01-08.pdf/5d432a03-656e-3778-eb3b-99d8e848e84e?version=1.0&t=1767825618805&download=true" target="_blank" rel="noopener">ed. 1845</a><br>Não é o SubCPSI (segurança institucional), presidido pelo Subprocurador-Geral em Assuntos Administrativos.</div>
+        </li>
+        <li class="row ativa">
+          <div class="org">Comitê de Políticas de Gestão Administrativa — FNG/CNMP<span class="chip c-com">Comitê</span><span class="st s-ativa">Ativa</span></div>
+          <span class="role">Titular do MPPE (anexo da PGJ nº 891/2023)</span>
+          <div class="meta"><b>PGJ nº 891/2023</b> · DOE 15/03/2023 · <a href="https://portal.mppe.mp.br/documents/20121/459269/MPPE+15.03.2023+Edicao+1191.pdf/379d5165-67fc-b6e8-bfea-b0b0036dbf21?version=1.0&t=1678832153917&download=true" target="_blank" rel="noopener">ed. 1191</a><br>Sem renovação ou revogação localizada desde 2023 — vigência a confirmar.</div>
+        </li>
+        <li class="grp">Histórico — 3 registros</li>
+        <li class="row substituida">
+          <div class="org">Comitê de Segurança Institucional (CSI/MPPE)<span class="chip c-com">Comitê</span><span class="st s-sub">Substituída</span></div>
+          <span class="role">Membro indicado pela Corregedoria-Geral</span>
+          <div class="meta"><b>PGJ nº 463/2025</b> · DOE 17/02/2025 · <a href="https://portal.mppe.mp.br/documents/20121/1172660/MPPE+17.02.2025+Edicao+1647.pdf/9ea21bdd-106c-f2b2-91db-5fb1c512ff9f?version=1.0&t=1739570688148&download=true" target="_blank" rel="noopener">ed. 1647</a><br>Composição superada pela PGJ nº 09/2026.</div>
+        </li>
+        <li class="row dispensa">
+          <div class="org">Núcleo do Desporto e Defesa do Torcedor (NUDTOR)<span class="chip c-nuc">Núcleo</span><span class="st s-disp">Dispensa</span></div>
+          <span class="role">Membro</span>
+          <div class="meta"><b>PGJ nº 1.076/2024</b> · DOE 15/04/2024 · <a href="https://portal.mppe.mp.br/documents/20121/843757/MPPE+15.04.2024+Edicao+1445.pdf/88be36ba-08a8-1c25-4ebb-3eea22d2b360?version=1.0&t=1712959778205&download=true" target="_blank" rel="noopener">ed. 1445</a><br>Dispensa a pedido pela PGJ nº 490/2025 (DOE 18/02/2025, ed. 1648), que também o dispensou do GEX-PDAP.</div>
+        </li>
+        <li class="row dispensa">
+          <div class="org">Núcleo de Apoio à Gestão Administrativa e Financeira (NGAF)<span class="chip c-nuc">Núcleo</span><span class="st s-disp">Dispensa</span></div>
+          <span class="role">Assessor técnico da PGJ</span>
+          <div class="meta"><b>PGJ de 13/01/2023</b> · DOE 16/01/2023 · <a href="https://portal.mppe.mp.br/documents/20121/273088/MPPE+16.01.2023+edi%C3%A7%C3%A3o+1154.pdf/b351b46f-a959-c183-33d6-b2c8df6e0e59?version=1.0&t=1673649004547&download=true" target="_blank" rel="noopener">ed. 1154</a><br>Dispensa a pedido pela PGJ nº 184/2023, na mesma edição.</div>
+        </li>
+      </ul>
+    </section>
+    <section class="card" data-active="1">
+      <div class="ch">
+        <div class="avatar">CH</div>
+        <div class="who"><h2>Charles Hamilton dos Santos Lima</h2><p>Corregedor-Geral Substituto do MPPE</p></div>
+        <div class="pill on">2 ativas</div>
+      </div>
+      <ul class="items">
+        <li class="grp">Designações ativas</li>
+        <li class="row ativa">
+          <div class="org">Núcleo de Apoio Executivo da Gestão Estratégica<span class="chip c-nuc">Núcleo</span><span class="st s-ativa">Ativa</span></div>
+          <span class="role">Representante da Corregedoria-Geral</span>
+          <div class="meta"><b>PGJ nº 892/2025</b> · DOE 26/03/2025 · <a href="https://portal.mppe.mp.br/documents/20121/1198376/MPPE+26.03.2025+Edicao+1668.pdf/5750d0a1-61d2-5f57-3fd4-bd37a735e9a3?version=1.0&t=1742942484409&download=true" target="_blank" rel="noopener">ed. 1668</a><br>Publicada em 26/03/2025 e republicada em 27/03/2025 (ed. 1669).</div>
+        </li>
+        <li class="row ativa">
+          <div class="org">Grupo de Trabalho de IA Generativa (GTIA-MPPE)<span class="chip c-csl">GT</span><span class="st s-ativa">Ativa</span></div>
+          <span class="role">Membro</span>
+          <div class="meta"><b>PGJ nº 1.079/2024</b> · DOE 16/04/2024 · <a href="https://portal.mppe.mp.br/documents/20121/843757/MPPE+16.04.2024+Edicao+1446.pdf/22dff6ec-fe42-2005-aad6-3ecd5ba2ea4c?version=1.0&t=1713218666630&download=true" target="_blank" rel="noopener">ed. 1446</a><br>Sem ato de revogação ou nova composição localizado.</div>
+        </li>
+        <li class="grp">Histórico — 1 registro</li>
+        <li class="row substituida">
+          <div class="org">Conselho Deliberativo do FDIMPPE<span class="chip c-com">Conselho</span><span class="st s-sub">Substituída</span></div>
+          <span class="role">Membro</span>
+          <div class="meta"><b>PGJ nº 2.443/2024</b> · DOE 13/08/2024 · <a href="https://portal.mppe.mp.br/documents/20121/983078/DiarioOficialMPPE-Edicao+num1526-2024-08-13.pdf/5c45d7ee-f4e2-00f9-fc2a-ddda9604cadc?version=1.0&t=1723501709989&download=true" target="_blank" rel="noopener">ed. 1526</a><br>Nova composição pela PGJ nº 813/2025 (DOE 18/03/2026, ed. 1890), sem seu nome: E. L. Silva Cajueiro, J. Correia de Araújo e R. Van Der Linden (supl.).</div>
+        </li>
+      </ul>
+    </section>
+    <section class="card" data-active="1">
+      <div class="ch">
+        <div class="avatar">JE</div>
+        <div class="who"><h2>Jecqueline Guilherme Aymar Elihimas</h2><p>Corregedora-Auxiliar da CGMP</p></div>
+        <div class="pill on">2 ativas</div>
+      </div>
+      <ul class="items">
+        <li class="grp">Designações ativas</li>
+        <li class="row ativa">
+          <div class="org">Comissão de Prevenção a Situação de Risco à Saúde Mental<span class="chip c-com">Comissão</span><span class="st s-ativa">Ativa</span></div>
+          <span class="role">Representante da Corregedoria-Geral</span>
+          <div class="meta"><b>PGJ nº 4.101/2025</b> · DOE 24/11/2025 · <a href="https://portal.mppe.mp.br/documents/20121/1539951/DiarioOficialMPPE-Edicao+num1825-2025-11-24.pdf/1ae0d88f-4730-8bbd-86c7-5f220cac20b6?version=1.0&t=1763593084596&download=true" target="_blank" rel="noopener">ed. 1825</a><br>Publica a composição vigente e revoga as anteriores (PGJ nº 446/2024, 1.066/2025 e 1.464/2025). Atos posteriores (4.375/2025 e 3.218/2026) trocaram apenas assentos de servidores.</div>
+        </li>
+        <li class="row ativa">
+          <div class="org">Núcleo DHANA Josué de Castro<span class="chip c-nuc">Núcleo</span><span class="st s-ativa">Ativa</span></div>
+          <span class="role">Membro — alimentação e nutrição adequadas</span>
+          <div class="meta"><b>PGJ nº 561/2023</b> · DOE 08/02/2023 · <a href="https://portal.mppe.mp.br/documents/20121/346404/MPPE+08.02.2023+Edicao+1171-2023.pdf/b1cd1e40-5c5e-57c1-e780-f729c9f76cf7?version=1.0&t=1675806543398&download=true" target="_blank" rel="noopener">ed. 1171</a><br>Sem ato de dispensa ou nova composição localizado.</div>
+        </li>
+        <li class="grp">Histórico — 4 registros</li>
+        <li class="row substituida">
+          <div class="org">Comissão de Prevenção a Situação de Risco à Saúde Mental<span class="chip c-com">Comissão</span><span class="st s-sub">Substituída</span></div>
+          <span class="role">Representante da Corregedoria-Geral</span>
+          <div class="meta"><b>PGJ nº 1.464/2025</b> · DOE 07/05/2025 · <a href="https://portal.mppe.mp.br/documents/20121/1298104/MPPE+07.05.2025+Edicao+1693.pdf/7f5ced55-c9d8-dca7-b60f-00c08e356dfc?version=1.0&t=1746569283857&download=true" target="_blank" rel="noopener">ed. 1693</a><br>Composição superada pela PGJ nº 4.101/2025.</div>
+        </li>
+        <li class="row substituida">
+          <div class="org">Comissão de Prevenção a Situação de Risco à Saúde Mental<span class="chip c-com">Comissão</span><span class="st s-sub">Substituída</span></div>
+          <span class="role">Representante da Corregedoria-Geral</span>
+          <div class="meta"><b>PGJ nº 1.066/2025</b> · DOE 11/04/2025 · <a href="https://portal.mppe.mp.br/documents/20121/1252572/MPPE+11.04.2025+Edicao+1680.pdf/61d4c212-065f-6e12-6e21-177f3066d769?version=1.0&t=1744323172004&download=true" target="_blank" rel="noopener">ed. 1680</a><br>Composição superada pela PGJ nº 4.101/2025.</div>
+        </li>
+        <li class="row substituida">
+          <div class="org">Comissão de Prevenção a Situação de Risco à Saúde Mental<span class="chip c-com">Comissão</span><span class="st s-sub">Substituída</span></div>
+          <span class="role">Representante da Corregedoria-Geral</span>
+          <div class="meta"><b>PGJ nº 446/2024</b> · DOE 26/02/2024 · <a href="https://portal.mppe.mp.br/documents/20121/803536/MPPE+26.02.2024+Edicao+1413.pdf/43f04e74-454c-a672-c820-ef35981f6f12?version=1.0&t=1708726303998&download=true" target="_blank" rel="noopener">ed. 1413</a><br>Ato de instituição da comissão; composição superada pela PGJ nº 4.101/2025.</div>
+        </li>
+        <li class="row dispensa">
+          <div class="org">Núcleo de Estudos Temáticos de Defesa da Infância e Juventude<span class="chip c-nuc">Núcleo</span><span class="st s-disp">Dispensa</span></div>
+          <span class="role">Membro</span>
+          <div class="meta"><b>PGJ nº 1.219/2023</b> · DOE 20/04/2023 · <a href="https://portal.mppe.mp.br/documents/20121/488030/MPPE+20.04.2023+Edicao+1215.pdf/49344481-bcec-6d48-38a3-3019290377e9?version=1.0&t=1681941478618&download=true" target="_blank" rel="noopener">ed. 1215</a><br>Dispensa a pedido pela PGJ nº 545/2024 (DOE 04/03/2024, ed. 1418).</div>
+        </li>
+      </ul>
+    </section>
+    <section class="card" data-active="1">
+      <div class="ch">
+        <div class="avatar">MI</div>
+        <div class="who"><h2>Maria Ivana Botelho Vieira da Silva</h2><p>Corregedora-Geral do MPPE</p></div>
+        <div class="pill on">1 ativa</div>
+      </div>
+      <ul class="items">
+        <li class="grp">Designações ativas</li>
+        <li class="row ativa">
+          <div class="org">Núcleo de Enfrentamento ao Racismo (NER)<span class="chip c-nuc">Núcleo</span><span class="st s-ativa">Ativa</span></div>
+          <span class="role">Membro</span>
+          <div class="meta"><b>PGJ nº 1.712/2026</b> · DOE 28/05/2026 · <a href="https://portal.mppe.mp.br/documents/20121/2137178/MPPE+28.05.2026+Edicao+1938.pdf/37de03cc-4c07-a5ac-24d9-e00e44cb764d?version=1.0&t=1779919857394&download=true" target="_blank" rel="noopener">ed. 1938</a><br>Republicada por incorreção em 02/06/2026 (ed. 1941). Atualiza a composição anterior, da PGJ nº 788/2026.</div>
+        </li>
+        <li class="grp">Histórico — 3 registros</li>
+        <li class="row substituida">
+          <div class="org">Núcleo de Enfrentamento ao Racismo (NER)<span class="chip c-nuc">Núcleo</span><span class="st s-sub">Substituída</span></div>
+          <span class="role">Membro</span>
+          <div class="meta"><b>PGJ nº 788/2026</b> · DOE 17/03/2026 · <a href="https://portal.mppe.mp.br/documents/20121/1987866/MPPE+17.03.2026+Edicao+1889.pdf/66d27871-8fbe-547f-37f6-52ba429403a1?version=1.0&t=1773700466253&download=true" target="_blank" rel="noopener">ed. 1889</a><br>Composição superada pela PGJ nº 1.712/2026 (ed. 1938).</div>
+        </li>
+        <li class="row encerrada">
+          <div class="org">Grupo de Trabalho sobre Discriminação Racial (GT Racismo)<span class="chip c-csl">GT</span><span class="st s-enc">Encerrada</span></div>
+          <span class="role">Coordenadora</span>
+          <div class="meta"><b>PGJ de 09/05/2023</b> · DOE 10/05/2023 · <a href="https://portal.mppe.mp.br/documents/20121/605029/MPPE+10.05.2023+Edicao+1227.pdf/1ea06c92-95ab-10fe-0545-8ef6c617402c?version=1.0&t=1683676059597&download=true" target="_blank" rel="noopener">ed. 1227</a><br>O GT foi convertido no NER, cuja composição atual é a da PGJ nº 1.712/2026.</div>
+        </li>
+        <li class="row substituida">
+          <div class="org">Núcleo de Apoio Executivo da Gestão Estratégica<span class="chip c-nuc">Núcleo</span><span class="st s-sub">Substituída</span></div>
+          <span class="role">Membro</span>
+          <div class="meta"><b>PGJ nº 518/2023</b> · DOE 06/02/2023 · <a href="https://portal.mppe.mp.br/documents/20121/346404/MPPE+06.02.2023+Edi%C3%A7%C3%A3o+1169.pdf/893edc43-320f-26c2-20a0-ab4446925dc5?version=1.0&t=1675467327180&download=true" target="_blank" rel="noopener">ed. 1169</a><br>Revogada pela PGJ nº 892/2025, que designou o Dr. Charles Hamilton em seu lugar.</div>
+        </li>
+      </ul>
+    </section>
+    <section class="card" data-active="1">
+      <div class="ch">
+        <div class="avatar">AL</div>
+        <div class="who"><h2>Alen de Souza Pessoa</h2><p>Corregedor-Auxiliar da CGMP</p></div>
+        <div class="pill on">1 ativa</div>
+      </div>
+      <ul class="items">
+        <li class="grp">Designações ativas</li>
+        <li class="row ativa">
+          <div class="org">Núcleo do Desporto e Defesa do Torcedor (NUDTOR)<span class="chip c-nuc">Núcleo</span><span class="st s-ativa">Ativa</span></div>
+          <span class="role">Membro — 6º PJ Criminal da Capital e assessor da CGMP</span>
+          <div class="meta"><b>PGJ nº 1.780/2025</b> · DOE 05/06/2025 · <a href="https://portal.mppe.mp.br/documents/20121/1342803/DiarioOficialMPPE-Edicao+num1714-2025-06-05.pdf/6d77394c-2323-0a41-b7e6-702bb89bf102?version=1.0&t=1749077368344&download=true" target="_blank" rel="noopener">ed. 1714</a><br>A coordenação do núcleo mudou em 2026 (PGJ nº 2.679/2026), sem afetar seu assento; sem dispensa localizada.</div>
+        </li>
+      </ul>
+    </section>
+    <section class="card zero" data-active="0">
+      <div class="ch">
+        <div class="avatar" style="background:var(--label-3)">KG</div>
+        <div class="who"><h2>Katarina Morais de Gusmão</h2><p>Corregedora-Auxiliar da CGMP</p></div>
+        <div class="pill">0 ativa</div>
+      </div>
+      <ul class="items"><li class="empty"><div class="meta">Nenhuma designação para núcleo, comitê, conselho ou comissão no período. Atua como corregedora-auxiliar e secretária de comissões de processo disciplinar (excluídas por critério).</div></li></ul>
+    </section>
+    <section class="card zero" data-active="0">
+      <div class="ch">
+        <div class="avatar" style="background:var(--label-3)">NL</div>
+        <div class="who"><h2>Norma da Mota Sales Lima</h2><p>Procuradora de Justiça · Corregedora-Auxiliar</p></div>
+        <div class="pill">0 ativa</div>
+      </div>
+      <ul class="items"><li class="empty"><div class="meta">Nenhuma designação no período após a exclusão de mesa/comissão eleitoral (PGJ nº 1.588/2023). Integra o Colégio de Procuradores por força do cargo, sem ato de designação.</div></li></ul>
+    </section>
+  </div>
+
+  <footer>
+    <b>Método.</b> Varredura nominal em 882 edições do DOE/MPPE (2023-01-01 a 20/10/2026), buscando designações expressas, composições publicadas em lista, dispensas e os atos posteriores que alteram ou revogam cada designação. O histórico de cada membro é reconstruído em ordem cronológica inversa, de modo que a vigência de cada assento possa ser conferida no próprio ato.
+    <ul>
+      <li><b>Ativa</b> = designação sem dispensa e sem composição posterior que a exclua; quando a composição foi republicada, vale o ato mais recente.</li>
+      <li><b>Vigência a confirmar</b> = assento sem ato de renovação, revogação ou nova composição localizado no período (caso do FNG/CNMP).</li>
+      <li><b>Fora do escopo:</b> comissões de processo disciplinar, mesa/comissão eleitoral e editais de correição — os editais designam corregedores-auxiliares a cada correição, sem criar assento em órgão colegiado.</li>
+      <li>O portal não oferece busca full-text: cada edição foi baixada e o texto extraído; atos publicados apenas como imagem não seriam capturados.</li>
+    </ul>
+    <div class="stamp">Fonte: portal.mppe.mp.br/diario-oficial · consolidado em 20/10/2026</div>
+  </footer>
 </div>
 
-<div class="grid">
+<script>
+(function(){
+  "use strict";
+  var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  <!-- MARIA IVANA -->
-  <div class="card">
-    <div class="ch"><div class="avatar">MI</div>
-      <div class="who"><h2>Maria Ivana Botelho Vieira da Silva</h2><p>Corregedora-Geral do MPPE</p></div>
-      <div class="count on">1 ativa</div></div>
-    <ul class="items">
-      <li>
-        <div class="org">Núcleo de Enfrentamento ao Racismo (NER)<span class="chip c-nuc">Núcleo</span></div>
-        <div class="role">Membro</div>
-        <div class="meta"><b>Portaria PGJ de 01/06/2026</b> · DOE 02/06/2026 · <a href="https://portal.mppe.mp.br/documents/20121/2191123/DiarioOficialMPPE-Edicao+num1941-2026-06-02.pdf/c24c9aa6-9614-c6fb-8dea-c2de397b773b?version=1.0&download=true">ed. 1941</a><br>Composição anterior: PGJ nº 1.712/2026 (DOE 28/05/2026) — mantida em ambas.</div>
-      </li>
-    </ul>
-    <div class="closed"><h3>Encerradas / substituídas</h3>
-      <p><b>Núcleo de Apoio Executivo da Gestão Estratégica</b> — PGJ nº 518/2023: substituída pela PGJ nº 892/2025, que designou o Dr. Charles Hamilton.</p>
-      <p><b>GT sobre Discriminação Racial</b> — PGJ de 09/05/2023 (coordenadora): convertido no NER, cuja composição atual é a de 2026.</p>
-    </div>
-  </div>
+  /* ---- spring integrator: fixed sub-step (h = 1/240 s), never frame dt ---- */
+  function spring(from, to, opts){
+    var damping = opts.damping == null ? 1 : opts.damping;
+    var response = opts.response == null ? 0.4 : opts.response;
+    var w0 = 2 * Math.PI / response, z = damping;
+    var x = from, v = opts.velocity || 0, h = 1/240, acc = 0, last = 0, raf = 0, done = false;
+    function step(now){
+      if(!last) last = now;
+      acc += Math.min((now - last) / 1000, 0.064); last = now;
+      while(acc >= h){
+        var a = -w0*w0*(x - to) - 2*z*w0*v;
+        v += a*h; x += v*h; acc -= h;
+      }
+      if(Math.abs(x - to) < 0.08 && Math.abs(v) < 0.08){
+        opts.onUpdate(to); done = true; if(opts.onDone) opts.onDone(); return;
+      }
+      opts.onUpdate(x);
+      raf = requestAnimationFrame(step);
+    }
+    raf = requestAnimationFrame(step);
+    return {
+      stop: function(){ if(!done) cancelAnimationFrame(raf); done = true; }
+    };
+  }
 
-  <!-- CHARLES -->
-  <div class="card">
-    <div class="ch"><div class="avatar">CH</div>
-      <div class="who"><h2>Charles Hamilton dos Santos Lima</h2><p>Corregedor-Geral Substituto do MPPE</p></div>
-      <div class="count on">2 ativas</div></div>
-    <ul class="items">
-      <li>
-        <div class="org">Núcleo de Apoio Executivo da Gestão Estratégica<span class="chip c-nuc">Núcleo</span></div>
-        <div class="role">Representante da Corregedoria-Geral</div>
-        <div class="meta"><b>PGJ nº 892/2025</b> · DOE 26/03/2025 (republ. 27/03) · <a href="https://portal.mppe.mp.br/documents/20121/1198376/MPPE+26.03.2025+Edicao+1668.pdf/5750d0a1-61d2-5f57-3fd4-bd37a735e9a3?version=1.0&t=1742942484409&download=true">ed. 1668</a></div>
-      </li>
-      <li>
-        <div class="org">Grupo de Trabalho de IA Generativa (GTIA-MPPE)<span class="chip c-com">GT</span></div>
-        <div class="role">Membro</div>
-        <div class="meta"><b>PGJ nº 1.079/2024</b> · DOE 16/04/2024 · <a href="https://portal.mppe.mp.br/documents/20121/843757/MPPE+16.04.2024+Edicao+1446.pdf/22dff6ec-fe42-2005-aad6-3ecd5ba2ea4c?version=1.0&t=1713218666630&download=true">ed. 1446</a><br>Sem ato de revogação ou nova composição localizado.</div>
-      </li>
-    </ul>
-    <div class="closed"><h3>Encerrada / substituída</h3>
-      <p><b>Conselho Deliberativo do FDIMPPE</b> — PGJ nº 2.443/2024 (DOE 13/08/2024): nova composição pela <b>PGJ nº 813/2025</b> (DOE 18/03/2026, <a href="https://portal.mppe.mp.br/documents/20121/1987866/MPPE+18.03.2026+Edicao+1890.pdf/02477497-761c-6774-1206-2b9ae47d0b3e?version=1.0&download=true">ed. 1890</a>), sem seu nome — E. L. Silva Cajueiro, J. Correia de Araújo e R. Van Der Linden (supl.).</p>
-    </div>
-  </div>
+  /* ---- segmented control: material indicator that springs between tabs ---- */
+  var seg = document.querySelector('.seg');
+  var ind = document.getElementById('segInd');
+  var tabs = [].slice.call(seg.querySelectorAll('button'));
+  var cards = [].slice.call(document.querySelectorAll('.card'));
+  var q = document.getElementById('q');
+  var currentFilter = 'all';
+  var indSpring = null, indX = 3, indW = 0;
 
-  <!-- ALEN -->
-  <div class="card">
-    <div class="ch"><div class="avatar">AL</div>
-      <div class="who"><h2>Alen de Souza Pessoa</h2><p>Corregedor-Auxiliar da CGMP</p></div>
-      <div class="count on">1 ativa</div></div>
-    <ul class="items">
-      <li>
-        <div class="org">Núcleo do Desporto e Defesa do Torcedor (NUDTOR)<span class="chip c-nuc">Núcleo</span></div>
-        <div class="role">Membro — 6º PJ Criminal da Capital e assessor da CGMP</div>
-        <div class="meta"><b>PGJ nº 1.780/2025</b> · DOE 05/06/2025 · <a href="https://portal.mppe.mp.br/documents/20121/1342803/DiarioOficialMPPE-Edicao+num1714-2025-06-05.pdf/6d77394c-2323-0a41-b7e6-702bb89bf102?version=1.0&t=1749077368344&download=true">ed. 1714</a><br>Coordenação do núcleo alterada em 2026 (PGJ 2.679/2026), sem afetar seu assento; sem dispensa localizada.</div>
-      </li>
-    </ul>
-  </div>
+  function placeInd(btn, instant){
+    var r = btn.getBoundingClientRect(), host = seg.getBoundingClientRect();
+    var nx = r.left - host.left, nw = r.width;
+    if(indSpring) indSpring.stop();
+    if(instant || REDUCED){
+      indX = nx; indW = nw;
+      ind.style.transform = 'translateX(' + nx + 'px)';
+      ind.style.width = nw + 'px';
+      return;
+    }
+    var fromX = indX, fromW = indW;
+    /* read the PRESENTATION value so a mid-flight tap redirects instead of jumping */
+    indSpring = spring(fromX, nx, {damping: 0.86, response: 0.32, velocity: (nx - fromX) * 6, onUpdate: function(x){
+      indX = x; ind.style.transform = 'translateX(' + x + 'px)';
+      indW = fromW + (nw - fromW) * (fromX === nx ? 1 : (x - fromX) / (nx - fromX || 1));
+      if(isFinite(indW)) ind.style.width = indW + 'px';
+    }});
+  }
 
-  <!-- CHICO -->
-  <div class="card">
-    <div class="ch"><div class="avatar">FE</div>
-      <div class="who"><h2>Francisco Edilson de Sá Júnior</h2><p>Corregedor-Auxiliar da CGMP</p></div>
-      <div class="count on">4 ativas</div></div>
-    <ul class="items">
-      <li>
-        <div class="org">Comitê Gestor de Sistemas da Atividade Fim (CGSAF)<span class="chip c-com">Comitê</span></div>
-        <div class="role">Membro indicado pela Corregedora-Geral</div>
-        <div class="meta"><b>PGJ nº 666/2026</b> · DOE 04/03/2026, efeitos desde 01/03/2026 · <a href="https://portal.mppe.mp.br/documents/20121/1987866/DiarioOficialMPPE-Edicao+num1881-2026-03-04.pdf/e714010c-9360-a826-1f1c-13641f4fc723?version=1.0&t=1772578241257&download=true">ed. 1881</a><br>Publica a nova composição e revoga as designações anteriores (a de 2023 era a PGJ 1.810/2023, art. 3º, "c").</div>
-      </li>
-      <li>
-        <div class="org">Comitê Estratégico de Tecnologia da Informação (CETI/MPPE)<span class="chip c-com">Comitê</span></div>
-        <div class="role">Membro indicado pela Corregedoria-Geral</div>
-        <div class="meta"><b>PGJ nº 1.810/2023, art. 2º, "c"</b> · DOE 14/06/2023 · <a href="https://portal.mppe.mp.br/documents/20121/632322/MPPE+14.06.2023+Edicao+1251.pdf/c742af16-c7b1-1e20-a75f-6d56bf87b6ab?version=1.0&t=1686693501355&download=true">ed. 1251</a><br>Última composição integral do CETI; a PGJ 666/2026 alterou apenas o CGSAF e o assento nato do seu presidente.</div>
-      </li>
-      <li>
-        <div class="org">Comitê Estratégico de Proteção de Dados Pessoais (CEPDAP/MPPE)<span class="chip c-com">Comitê</span></div>
-        <div class="role">Membro indicado pela CGMP</div>
-        <div class="meta"><b>PGJ nº 175/2024</b> · DOE 24/01/2024, efeitos desde 02/01/2024 · <a href="https://portal.mppe.mp.br/documents/20121/777709/MPPE+24.01.2024+Edicao+1394.pdf/c21016dd-5d15-fc38-d554-291758de6e29?version=1.0&t=1706050623020&download=true">ed. 1394</a></div>
-      </li>
-      <li>
-        <div class="org">Grupo de Trabalho de IA Generativa (GTIA-MPPE)<span class="chip c-com">GT</span></div>
-        <div class="role">Membro</div>
-        <div class="meta"><b>PGJ nº 1.079/2024</b> · DOE 16/04/2024 · <a href="https://portal.mppe.mp.br/documents/20121/843757/MPPE+16.04.2024+Edicao+1446.pdf/22dff6ec-fe42-2005-aad6-3ecd5ba2ea4c?version=1.0&t=1713218666630&download=true">ed. 1446</a></div>
-      </li>
-    </ul>
-  </div>
+  function apply(){
+    var term = (q.value || '').trim().toLowerCase();
+    cards.forEach(function(c){
+      var isActive = c.dataset.active === '1';
+      var okFilter = currentFilter === 'all' || (currentFilter === 'on' && isActive) || (currentFilter === 'off' && !isActive);
+      var okTerm = !term || c.textContent.toLowerCase().indexOf(term) !== -1;
+      var show = okFilter && okTerm;
+      if(show && c.classList.contains('is-hidden')){
+        c.classList.remove('is-hidden');
+        if(!REDUCED) spring(0, 1, {damping:1, response:0.34, onUpdate:function(v){ c.style.opacity = v; }});
+        c.style.opacity = 1;
+      } else if(!show && !c.classList.contains('is-hidden')){
+        c.classList.add('is-hidden');
+      }
+    });
+  }
 
-  <!-- JECQUELINE -->
-  <div class="card">
-    <div class="ch"><div class="avatar">JE</div>
-      <div class="who"><h2>Jecqueline Guilherme Aymar Elihimas</h2><p>Corregedora-Auxiliar da CGMP</p></div>
-      <div class="count on">2 ativas</div></div>
-    <ul class="items">
-      <li>
-        <div class="org">Núcleo DHANA Josué de Castro<span class="chip c-nuc">Núcleo</span></div>
-        <div class="role">Membro — alimentação e nutrição adequadas</div>
-        <div class="meta"><b>PGJ nº 561/2023</b> · DOE 08/02/2023 · <a href="https://portal.mppe.mp.br/documents/20121/346404/MPPE+08.02.2023+Edicao+1171-2023.pdf/b1cd1e40-5c5e-57c1-e780-f729c9f76cf7?version=1.0&t=1675806543398&download=true">ed. 1171</a><br>Sem ato de dispensa ou nova composição localizado.</div>
-      </li>
-      <li>
-        <div class="org">Comissão de Prevenção a Situação de Risco à Saúde Mental<span class="chip c-com">Comissão</span></div>
-        <div class="role">Representante da Corregedoria-Geral</div>
-        <div class="meta"><b>PGJ nº 4.101/2025</b> · DOE 24/11/2025 · <a href="https://portal.mppe.mp.br/documents/20121/1539951/DiarioOficialMPPE-Edicao+num1825-2025-11-24.pdf/1ae0d88f-4730-8bbd-86c7-5f220cac20b6?version=1.0&t=1763593084596&download=true">ed. 1825</a><br>Publica a nova composição e revoga as anteriores (446/2024 e 1.066/2025). Atos posteriores (4.375/2025 e 3.218/2026) trocaram apenas assentos de servidores.</div>
-      </li>
-    </ul>
-    <div class="closed"><h3>Encerrada / substituída</h3>
-      <p><b>Núcleo de Estudos Temáticos de Defesa da Infância e Juventude</b> — PGJ nº 1.219/2023: dispensa a pedido pela <b>PGJ nº 545/2024</b> (DOE 04/03/2024).</p>
-    </div>
-  </div>
+  tabs.forEach(function(b){
+    b.addEventListener('click', function(){
+      tabs.forEach(function(o){ o.setAttribute('aria-selected', o === b ? 'true' : 'false'); });
+      currentFilter = b.dataset.filter;
+      placeInd(b, false);
+      apply();
+    });
+  });
+  q.addEventListener('input', apply);
+  window.addEventListener('resize', function(){ var sel = tabs.filter(function(b){ return b.getAttribute('aria-selected') === 'true'; })[0] || tabs[0]; placeInd(sel, true); });
+  requestAnimationFrame(function(){ placeInd(tabs[0], true); });
 
-  <!-- PETRUCIO -->
-  <div class="card">
-    <div class="ch"><div class="avatar">PL</div>
-      <div class="who"><h2>Petrúcio José Luna de Aquino</h2><p>Corregedor-Auxiliar da CGMP</p></div>
-      <div class="count on">3 ativas</div></div>
-    <ul class="items">
-      <li>
-        <div class="org">Comitê de Segurança Institucional (CSI/MPPE)<span class="chip c-com">Comitê</span></div>
-        <div class="role">Membro indicado pela Corregedoria-Geral</div>
-        <div class="meta"><b>PGJ nº 09/2026</b> · DOE 08/01/2026 · <a href="https://portal.mppe.mp.br/documents/20121/1907240/DiarioOficialMPPE-Edicao+num1845-2026-01-08.pdf/5d432a03-656e-3778-eb3b-99d8e848e84e?version=1.0&t=1767825618805&download=true">ed. 1845</a><br>Composição anterior: PGJ nº 463/2025 (DOE 17/02/2025).</div>
-      </li>
-      <li>
-        <div class="org">Subcomitê de Segurança de Pessoas (SubCSP/MPPE)<span class="chip c-com">Subcomitê</span></div>
-        <div class="role">Membro indicado pela Corregedoria-Geral</div>
-        <div class="meta"><b>PGJ nº 09/2026</b> · DOE 08/01/2026 · <a href="https://portal.mppe.mp.br/documents/20121/1907240/DiarioOficialMPPE-Edicao+num1845-2026-01-08.pdf/5d432a03-656e-3778-eb3b-99d8e848e84e?version=1.0&t=1767825618805&download=true">ed. 1845</a><br>Não é o SubCPSI (segurança institucional), presidido pelo SubPGJ administrativo.</div>
-      </li>
-      <li>
-        <div class="org">Comitê de Políticas de Gestão Administrativa — FNG/CNMP<span class="chip c-com">Comitê</span></div>
-        <div class="role">Titular do MPPE (anexo da PGJ nº 891/2023)</div>
-        <div class="meta"><b>PGJ nº 891/2023</b> · DOE 15/03/2023 · <a href="https://portal.mppe.mp.br/documents/20121/459269/MPPE+15.03.2023+Edicao+1191.pdf/379d5165-67fc-b6e8-bfea-b0b0036dbf21?version=1.0&t=1678832153917&download=true">ed. 1191</a><br><span class="tag">atenção</span> sem renovação ou revogação localizada desde 2023.</div>
-      </li>
-    </ul>
-    <div class="closed"><h3>Encerradas / substituídas</h3>
-      <p><b>NGAF</b> — PGJ de 13/01/2023: dispensa a pedido pela PGJ nº 184/2023 (DOE 16/01/2023).</p>
-      <p><b>NUDTOR</b> — PGJ nº 1.076/2024: dispensa a pedido pela PGJ nº 490/2025 (DOE 18/02/2025), que também o dispensou do GEX-PDAP.</p>
-    </div>
-  </div>
+  /* ---- disclosure panels: height spring from the LIVE height (interruptible) ---- */
+  document.querySelectorAll('.disc').forEach(function(btn){
+    var panel = btn.nextElementSibling;
+    var anim = null;
+    btn.addEventListener('click', function(){
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+      var from = panel.getBoundingClientRect().height;
+      var to = open ? 0 : panel.firstElementChild.getBoundingClientRect().height;
+      if(anim) anim.stop();
+      if(REDUCED){ panel.style.height = to + 'px'; return; }
+      anim = spring(from, to, {damping: 0.92, response: 0.34, velocity: (to - from) * 4, onUpdate: function(v){
+        panel.style.height = Math.max(0, v) + 'px';
+      }});
+    });
+  });
 
-  <!-- KATARINA -->
-  <div class="card zero">
-    <div class="ch"><div class="avatar" style="background:#5b6b7f">KG</div>
-      <div class="who"><h2>Katarina Morais de Gusmão</h2><p>Corregedora-Auxiliar da CGMP</p></div>
-      <div class="count off">0 ativa</div></div>
-    <ul class="items"><li><div class="meta">Nenhuma designação para núcleo, comitê, conselho ou comissão no período. Atua como corregedora-auxiliar e na secretaria de comissões de processo disciplinar (excluídas por critério).</div></li></ul>
-  </div>
+  /* ---- entrance: staggered, critically damped (no bounce without momentum) ---- */
+  if(!REDUCED){
+    cards.forEach(function(c, i){
+      c.style.opacity = 0;
+      var y = 14;
+      setTimeout(function(){
+        spring(y, 0, {damping:1, response:0.5, onUpdate:function(v){
+          c.style.transform = 'translateY(' + v + 'px)';
+          c.style.opacity = String(1 - Math.min(1, Math.abs(v) / 14));
+        }, onDone:function(){ c.style.transform = 'none'; c.style.opacity = 1; }});
+      }, i * 55);
+    });
+  }
 
-  <!-- NORMA -->
-  <div class="card zero">
-    <div class="ch"><div class="avatar" style="background:#5b6b7f">NL</div>
-      <div class="who"><h2>Norma da Mota Sales Lima</h2><p>Procuradora de Justiça · Corregedora-Auxiliar</p></div>
-      <div class="count off">0 ativa</div></div>
-    <ul class="items"><li><div class="meta">Nenhuma designação no período após a exclusão de mesa/comissão eleitoral. Integra o Colégio de Procuradores por força do cargo (posse em 06/11/2025), sem ato de designação.</div></li></ul>
-  </div>
+  /* ---- KPI count-up: springs, no fixed durations ---- */
+  document.querySelectorAll('.kpi b').forEach(function(el){
+    var target = parseInt(el.dataset.count, 10);
+    if(REDUCED || !target){ return; }
+    el.textContent = '0';
+    spring(0, target, {damping:1, response:0.7, onUpdate:function(v){ el.textContent = String(Math.round(v)); }, onDone:function(){ el.textContent = String(target); }});
+  });
 
-</div>
+  document.getElementById('print').addEventListener('click', function(){ window.print(); });
 
-<footer>
-  <b>Método.</b> Varredura nominal em 882 edições do DOE/MPPE (2023-01-01 a 19/10/2026): designações expressas, composições publicadas em lista, dispensas e atos de alteração/revogação posteriores a cada designação.
-  <ul>
-    <li><b>Ativa</b> = designação sem dispensa e sem composição posterior que a exclua; quando houve republicação da composição, vale o ato mais recente.</li>
-    <li><b>Correções nesta versão:</b> a PGJ nº 1.810/2023 designa o CETI no art. 2º e o CGSAF no art. 3º (o art. 4º é o CGSAM); o número antes ilegível do ato do CGSAF é <b>PGJ nº 666/2026</b>; a composição atual da comissão de saúde mental é a da <b>PGJ nº 4.101/2025</b>; a composição do FDIMPPE de 2024 foi substituída em março de 2026 (Charles não consta).</li>
-    <li>O portal não oferece busca full-text: cada edição foi baixada e o texto extraído; atos publicados apenas como imagem não seriam capturados.</li>
-  </ul>
-  <div style="margin-top:8px">Fonte: portal.mppe.mp.br/diario-oficial · consolidado em 19/10/2026</div>
-</footer>
-</div></body></html>
+  /* ---- geometry published from the header, never a CSS constant ---- */
+  var chrome = document.getElementById('chrome');
+  function publishGeometry(){
+    document.documentElement.style.setProperty('--chrome-h', chrome.getBoundingClientRect().height + 'px');
+  }
+  publishGeometry();
+  if(window.ResizeObserver){ new ResizeObserver(publishGeometry).observe(chrome); }
+  window.addEventListener('resize', publishGeometry);
+})();
+</script>
+</body></html>
